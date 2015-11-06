@@ -12,13 +12,18 @@ function record(){
 }
 
 function onSuccess(mediaFiles){
-    path = mediaFiles[0].fullPath;
+    var i;
+    for(i=0; i<mediaFiles.lenght; i++){
+        console.log(mediaFiles[i]);
+    }
+    /*path = mediaFiles[0].fullPath;
 
     var myvdo = document.getElementById("myaudio");
     myvdo.style.display = 'block';
     myvdo.src = path;
 
     document.getElementById("result").innerHTML = "Record Success!!" + path;
+*/
 }
 
 function onFail(error){
